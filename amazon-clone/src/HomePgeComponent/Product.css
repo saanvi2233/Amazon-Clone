@@ -1,0 +1,80 @@
+/* Default styles */
+.product {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px;
+  padding: 20px;
+  max-height: 400px;
+  flex: 1;
+  min-width: 200px; /* Adjust this value based on the minimum width you want for each product */
+  z-index: 1;
+}
+
+.product > img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product-info {
+  height: 100px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.product_price {
+  margin-top: 5px;
+}
+
+.product-rating {
+  display: flex;
+  justify-content: center;
+}
+
+.product > button {
+  background-color: #f0c14b;
+  border: 2px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  cursor: pointer;
+}
+
+.product > button:hover {
+  background-color: #ddb347;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .product {
+    min-width: 150px; /* Decrease minimum width for each product */
+    padding: 15px; /* Decrease padding for each product */
+  }
+
+  .product > img {
+    max-height: 150px; /* Decrease image height */
+  }
+
+  .product-info {
+    height: 80px; /* Decrease height of product info */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product {
+    min-width: 120px; /* Further decrease minimum width for each product */
+    padding: 10px; /* Further decrease padding for each product */
+  }
+
+  .product > img {
+    max-height: 120px; /* Further decrease image height */
+  }
+
+  .product-info {
+    height: 60px; /* Further decrease height of product info */
+  }
+}
